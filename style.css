@@ -1,0 +1,199 @@
+/*                              OVERORDNET                           */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgba(42, 107, 191, 1);
+  background-color: rgba(241, 240, 234, 1);
+}
+
+/* Bestemmer margin i bunden */
+.indhold_section_samlet {
+  margin-bottom: 4rem;
+}
+
+/* Gør img responsiv */
+img {
+  width: 100%;
+}
+
+/*                           DOWNLOADEDE FONTE                     */
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.open-sans {
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/*               BESTEMMER DESING PÅ OVERSKRIFTER OG BRØDTEKST                  */
+
+h1 {
+  font-family: "Bebas Neue", serif;
+  text-align: center;
+}
+h2 {
+  font-family: "Bebas Neue", serif;
+}
+p,
+li,
+a {
+  font-family: "Open Sans";
+  font-weight: lighter;
+  line-height: 2rem;
+}
+li:last-child {
+  margin-bottom: 4rem;
+}
+
+/*                          BESTEMMER MEDIAQUERIES DESKTOP                      */
+
+@media (min-width: 1200px) {
+  /* Bestemmer flex for begge rows */
+  .indhold_row {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 0 8%;
+  }
+
+  /* Bestemmer outlines */
+  img,
+  .indhold_kategori,
+  .indhold_kategori_overskrift {
+    outline-style: solid;
+    outline-width: 2px;
+  }
+  .indhold_kategori_numre {
+    outline-style: none;
+  }
+
+  /* Bestemmer størrelse på numre i headings */
+  .indhold_kategori_overskrift h2 {
+    display: flex;
+    align-items: center;
+  }
+  .indhold_kategori_overskrift {
+    display: grid;
+    grid-template-columns: 80% 20%;
+  }
+
+  /* Bestemmer headings og tekst */
+  h1 {
+    font-size: 7rem;
+    margin: 2rem;
+  }
+  h2 {
+    padding: 3%;
+    font-size: 2rem;
+  }
+  p,
+  li,
+  a {
+    padding: 3%;
+  }
+  li {
+    margin-left: 3rem;
+  }
+  #indhold_kategori_projekt_link {
+    margin-bottom: 2rem;
+  }
+}
+
+/*                          BESTEMMER MEDIAQUERIES TABLET                     */
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  /* Bestemmer outlines for img */
+  img {
+    outline-style: solid;
+    outline-width: 2px;
+  }
+
+  /* Bestemmer margin for hele section */
+  .indhold_section_samlet {
+    margin: 0 10rem;
+  }
+
+  /* Bestemmer headings og tekst */
+  h1 {
+    font-size: 4rem;
+  }
+  h1,
+  h2 {
+    margin-top: 3rem;
+  }
+  p,
+  li,
+  a {
+    margin: 1rem 0;
+    margin-bottom: 1.5rem;
+  }
+  li {
+    margin-left: 3rem;
+  }
+
+  /* Fjerner SVG numre fra kategori_overskrift */
+  .indhold_kategori_numre {
+    display: none;
+  }
+
+  /* Bestemmer billede størrelse og midterplacering */
+  .portræt {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+/*                          BESTEMMER MEDIAQUERIES MOBILE                     */
+
+@media (max-width: 799px) {
+  /* Bestemmer outlines for img */
+  img {
+    outline-style: solid;
+    outline-width: 2px;
+  }
+
+  /* Bestemmer margin for hele section */
+  .indhold_section_samlet {
+    margin: 0 3rem;
+  }
+
+  /* Bestemmer headings og tekst */
+  h1 {
+    font-size: 4rem;
+  }
+  h1,
+  h2 {
+    margin-top: 3rem;
+  }
+  p,
+  li,
+  a {
+    margin: 1rem 0;
+    margin-bottom: 1.5rem;
+  }
+  li {
+    margin-left: 3rem;
+  }
+
+  /* Fjerner SVG numre fra kategori_overskrift */
+  .indhold_kategori_numre {
+    display: none;
+  }
+
+  /* Bestemmer billede størrelse og midterplacering */
+  .portræt {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
