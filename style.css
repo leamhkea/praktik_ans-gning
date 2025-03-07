@@ -16,6 +16,8 @@
 /* Gør img responsiv */
 img {
   width: 100%;
+  align-self: stretch;
+  object-fit: cover;
 }
 
 /*                           DOWNLOADEDE FONTE                     */
@@ -55,8 +57,12 @@ li:last-child {
 
 /*                          BESTEMMER MEDIAQUERIES DESKTOP                      */
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   /* Bestemmer flex for begge rows */
+  .indhold_section_samlet {
+    display: grid;
+  }
+
   .indhold_row {
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -108,7 +114,7 @@ li:last-child {
 
 /*                          BESTEMMER MEDIAQUERIES TABLET                     */
 
-@media (min-width: 800px) and (max-width: 1199px) {
+@media (min-width: 800px) and (max-width: 1099px) {
   /* Bestemmer outlines for img */
   img {
     outline-style: solid;
@@ -149,6 +155,11 @@ li:last-child {
     margin-left: auto;
     margin-right: auto;
     display: block;
+  }
+
+  /* Sørger for at have afstand til bunden fra den sidste sektion/p */
+  section:last-child {
+    margin-bottom: 6rem;
   }
 }
 
@@ -195,5 +206,10 @@ li:last-child {
     margin-left: auto;
     margin-right: auto;
     display: block;
+  }
+
+  /* Sørger for at have afstand til bunden fra den sidste sektion/p */
+  section:last-child {
+    margin-bottom: 5rem;
   }
 }
