@@ -57,7 +57,7 @@ li:last-child {
 
 /*                          BESTEMMER MEDIAQUERIES DESKTOP                      */
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
   /* Bestemmer begge rows */
   .indhold_section_samlet {
     display: grid;
@@ -111,7 +111,7 @@ li:last-child {
 
 /*                          BESTEMMER MEDIAQUERIES TABLET                     */
 
-@media (min-width: 800px) and (max-width: 1099px) {
+@media (min-width: 800px) and (max-width: 1199px) {
   /* Bestemmer flex for begge rows */
   .indhold_section_samlet {
     display: grid;
