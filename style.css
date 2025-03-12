@@ -4,13 +4,39 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: rgba(42, 107, 191, 1);
   background-color: rgba(241, 240, 234, 1);
+}
+
+body {
+  color: rgba(42, 107, 191, 1);
 }
 
 /* Bestemmer margin i bunden */
 .indhold_section_samlet {
   margin-bottom: 4rem;
+}
+
+.portræt {
+  display: grid;
+  grid: "stack";
+  justify-items: center;
+  text-align: center;
+
+  p,
+  strong {
+    background-color: transparent;
+  }
+
+  > * {
+    grid-area: stack;
+    &:not(img) {
+      /* Sørger for, at tekst ikke gå helt ud til billedekant */
+      z-index: 1;
+    }
+  }
+  p:first-of-type {
+    align-self: start;
+  }
 }
 
 /* Gør img responsiv */
